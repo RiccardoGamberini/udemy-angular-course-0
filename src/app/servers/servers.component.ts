@@ -6,17 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-  allowNewServer = false;
-  serverCreationStatus = 'No server was created!';
-  serverName: string;
-  serversNamesExamples = ['test_server_0', 'test_server_1', 'test_server_2', 'test_server_3', 'test_server_4', 'test_server_5', 'test_server_6'];
-  seconds = 3;
+  aCondition: boolean;
+  conditions = [true, false, true, false, true, false, true, false];
+  buttonStatus: string;
+  seconds = 2;
 
   ngOnInit() {
     setInterval(() => {
       let randomInteger = this.randomIntFromInterval(0, 5);
       // In the following line "say" to the html file to change what is shown.
-      this.serverName = this.serversNamesExamples[randomInteger];
+      this.aCondition = this.conditions[randomInteger];
+      this.buttonStatus = this.aCondition ? 'disable property button is true' : 'disabled property button is false';
     }, this.seconds * 1000);
   }
 

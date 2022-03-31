@@ -1,4 +1,9 @@
-<!--
-{{ some typescript code }} is called string interpolation, serverName is the name of a property of servers.component.ts.
+<!--[some html element property name] syntax is used to do property binding.
+The variable aCondition of ts file is called property.
+The same data binding can be done with string interpolation ..... disabled="{{aCondition}}" .....
+String interpolation also use the aCondition property of ts file.
 -->
-<p>{{ serverName }}</p>
+<button
+  class="btn btn-primary"
+  [disabled]="aCondition">Add Server</button>
+<p>{{ buttonStatus }}</p>
