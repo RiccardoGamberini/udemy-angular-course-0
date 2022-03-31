@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
   users = [
-    { id: 2, role: 'guest' },
-    { id: 3, role: 'manager' },
-    { id: 4, role: 'admin' },
-    { id: 5, role: 'guest' },
+    { id: 2234, role: 'guest' },
+    { id: 974, role: 'manager' },
+    { id: 43278, role: 'admin' },
+    { id: 523498, role: 'guest' },
     { id: 6, role: 'guest' },
-    { id: 7, role: 'admin' },
-    { id: 8, role: 'manager' },
-    { id: 9, role: 'guest' },
+    { id: 72, role: 'admin' },
+    { id: 83245, role: 'manager' },
+    { id: 11, role: 'guest' },
     { id: 10, role: 'guest' }
   ];
 }

@@ -1,1 +1,9 @@
-<p *ngFor="let user of users">{{user.id}} {{user.role}}</p>
+<!--index and last are reserved keywords when using an *ngFor directive-->
+<p *ngFor="let user of users">
+  User id = {{user.id}} | User role = {{user.role}}
+</p>
+<p>{{ '-'.repeat(300)}}</p>
+<!--If *ngFor directive is used it's possible to declare other variables using reserved keywords. -->
+<p *ngFor="let user of users; let i = index; let isLastOfTheArray = last"> <!-- Reserved keywords are index and last-->-->
+  User id = {{user.id}} | User role = {{user.role}} | Index = {{i}} | Is last of the array = {{isLastOfTheArray}}
+</p>
