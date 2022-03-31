@@ -3,41 +3,32 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-servers',
   templateUrl: './servers.component.html',
-  styleUrls: ['./servers.component.css']
 })
 export class ServersComponent {
-  allowNewServer = false;
-  serverCreationStatus = 'No server was created!';
-  serverName = 'Testserver';
   serverCreated = false;
+  seconds = 2;
+  user = { id: 1, role: 'admin' };
   users = [
-    { id: 1, role: 'admin' },
     { id: 2, role: 'guest' },
     { id: 3, role: 'manager' },
-    { id: 1, role: 'admin' },
-    { id: 2, role: 'guest' },
-    { id: 3, role: 'guest' },
-    { id: 1, role: 'admin' },
-    { id: 2, role: 'manager' },
-    { id: 3, role: 'guest' }
-    ];
-
-  constructor() {
-    setTimeout(() => {
-      this.allowNewServer = true;
-    }, 2000);
-  }
+    { id: 4, role: 'admin' },
+    { id: 5, role: 'guest' },
+    { id: 6, role: 'guest' },
+    { id: 7, role: 'admin' },
+    { id: 8, role: 'manager' },
+    { id: 9, role: 'guest' },
+    { id: 10, role: 'guest' }
+  ];
 
   ngOnInit() {
+    setInterval(() => {
+      let randomInteger = this.randomIntFromInterval(0, 5);
+      // In the following line "say" to the html file to change what is shown.
+      this.user = this.users[randomInteger];
+    }, this.seconds * 1000);
   }
 
-  onCreateServer() {
-    this.serverCreated = true;
-    this.servers.push(this.serverName);
-    this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
-  }
-
-  onUpdateServerName(event: Event) {
-    this.serverName = (<HTMLInputElement>event.target).value;
+  randomIntFromInterval(min, max) { // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min)
   }
 }
