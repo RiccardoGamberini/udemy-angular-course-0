@@ -1,5 +1,6 @@
 <p>{{ user.role }}</p>
 <p *ngIf="['admin', 'manager'].includes(user.role); else noPermission">User has permission.</p>
+<!--#noPermission is a local reference-->
 <ng-template #noPermission>
   <p>User hasn't permission.</p>
 </ng-template>
