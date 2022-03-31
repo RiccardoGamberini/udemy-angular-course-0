@@ -1,9 +1,17 @@
-<!--[(ngModel)] syntax is used to do two way binding.
-The variable userName of ts file is called property.
--->
+<label>Server Name</label>
+<!--<input-->
+<!--type="text"-->
+<!--class="form-control"-->
+<!--(input)="onUpdateServerName($event)">-->
 <input
   type="text"
   class="form-control"
-  [(ngModel)]="userName">
-<!--With the following line is implemented data binding from ts to html. This line is here only to demonstrate that two way binding is working.-->
-<p>{{ userName }}</p>
+  [(ngModel)]="serverName">
+<!--<p>{{ serverName }}</p>-->
+<button
+  class="btn btn-primary"
+  (click)="onCreateServer()">Add Server</button>
+<!--<p [innerText]="allowNewServer"></p>-->
+<!--<p>{{ serverCreationStatus }}</p>-->
+<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
+<app-server *ngFor="let server of servers"></app-server>
