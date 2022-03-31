@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './servers.component.html',
 })
 export class ServersComponent {
-  serverCreated = false;
   seconds = 2;
   user = { id: 1, role: 'admin' };
   users = [
