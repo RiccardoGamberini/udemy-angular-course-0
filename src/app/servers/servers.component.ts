@@ -14,7 +14,7 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
     setInterval(() => {
       let randomInteger = this.randomIntFromInterval(0, 5);
-      // In the following line "say" to the html file to change what is shown.
+      // The following line "says" to the html file to change what is shown.
       this.aCondition = this.conditions[randomInteger];
       this.buttonStatus = this.aCondition ? 'disable property button is true' : 'disabled property button is false';
     }, this.seconds * 1000);
