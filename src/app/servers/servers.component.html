@@ -1,5 +1,1 @@
-<p>{{ user.role }}</p>
-<p *ngIf="['admin', 'manager'].includes(user.role); else noPermission">User has permission.</p>
-<ng-template #noPermission>
-  <p>User hasn't permission.</p>
-</ng-template>
+<p *ngFor="let user of users">{{user.id}} {{user.role}}</p>
