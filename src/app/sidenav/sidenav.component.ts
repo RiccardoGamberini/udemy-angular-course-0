@@ -1,14 +1,3 @@
-/* import {Component} from '@angular/core';
-
-@Component({
-  selector: 'app-sidenav',
-  templateUrl: './sidenav.component.html',
-  styleUrls: ['sidenav.component.css'],
-})
-export class SidenavComponent {
-  showFiller = false;
-} */
-
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -16,13 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.css']
 })
-export class SidenavComponent {
+export class SidenavComponent implements OnInit {
   sidenavWidth = 5;
+  serverName = "TestServer";
   ngStyle: string;
   sidenavIsCompressed = true;
   resizeButtonIconName = 'fast_forward';
   compressIconName = 'fast_rewind';
   decompressIconName = 'fast_forward';
+
+  ngOnInit() {
+  }
 
   changeSidenavMode() {
     this.sidenavIsCompressed = !this.sidenavIsCompressed;

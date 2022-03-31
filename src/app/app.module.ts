@@ -7,7 +7,7 @@ import { ServersComponent } from './servers/servers.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { MaterialExampleModule } from 'material.module';
+import { MaterialModule } from 'material.module';
 import { MatNativeDateModule } from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -25,7 +25,7 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     MatNativeDateModule,
-    MaterialExampleModule,
+    MaterialModule,
     ReactiveFormsModule,
   ],
   providers: [],
