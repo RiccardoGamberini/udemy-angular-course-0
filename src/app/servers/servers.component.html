@@ -1,10 +1,9 @@
-<!--[some html element property name] syntax is used to do property binding.
-The variable aCondition of ts file is called property.
-The same data binding CAN'T BE done with string interpolation this way..... disabled="{{aCondition}}" .....
-placing a boolean value between curly braces.
-String interpolation also use the aCondition property of ts file.
+<!--[(ngModel)] syntax is used to do two way binding.
+The variable userName of ts file is called property.
 -->
-<button
-  class="btn btn-primary"
-  [disabled]="aCondition">Add Server</button>
-<p>{{ buttonStatus }}</p>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="userName">
+<!--With the following line is implemented data binding from ts to html. This line is here only to demonstrate that two way binding is working.-->
+<p>{{ userName }}</p>

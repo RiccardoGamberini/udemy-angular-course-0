@@ -1,26 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-servers',
   templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.css']
 })
-export class ServersComponent implements OnInit {
-  aCondition: boolean;
-  conditions = [true, false, true, false, true, false, true, false];
-  buttonStatus: string;
-  seconds = 2;
-
-  ngOnInit() {
-    setInterval(() => {
-      let randomInteger = this.randomIntFromInterval(0, 5);
-      // In the following line "say" to the html file to change what is shown.
-      this.aCondition = this.conditions[randomInteger];
-      this.buttonStatus = this.aCondition ? 'disable property button is true' : 'disabled property button is false';
-    }, this.seconds * 1000);
-  }
-
-  randomIntFromInterval(min, max) { // min and max included
-    return Math.floor(Math.random() * (max - min + 1) + min)
-  }
+export class ServersComponent {
+  userName: string;
 }
