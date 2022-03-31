@@ -11,7 +11,7 @@
 		Fai scomparire del tutto la sidenav
 	  </button>
 	</div>
-  
+
 </mat-drawer-container> -->
   <mat-sidenav-container fullscreen>
 	<mat-sidenav #sidenav  mode="side" class="example-sidenav" [ngStyle]="{ 'width.em': sidenavWidth }" opened="true">
@@ -39,11 +39,11 @@
 		  </div>
 		</mat-list-item>
 		</mat-nav-list>
-		<button (click)="changeSidenavSize()" mat-raised-button>
+		<button (click)="changeSidenavMode()" mat-raised-button>
 			<mat-icon class="sidenav-menu">{{resizeButtonIconName}}</mat-icon>
 		</button>
 	</mat-sidenav>
 <!-- 	<div class="example-sidenav-content">
-		
+
 	</div> -->
 </mat-sidenav-container>
