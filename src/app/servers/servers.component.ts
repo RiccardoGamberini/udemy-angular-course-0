@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   aCondition: boolean;
   conditions = [true, false, true, false, true, false, true, false];
+  imagePath = 'https://www.w3schools.com/images/picture.jpg';
   buttonStatus: string;
   seconds = 2;
 
