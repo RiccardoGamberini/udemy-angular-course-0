@@ -1,32 +1,6 @@
-<!--
-0) If we bind a ts file property to an html attribute that hasn't a value, for example the attribute disabled, the data binding
-can be done only with property binding this way ..... [disable]="aCondition" ..... .
--->
-<button
-  class="btn btn-primary"
-  [disabled]="aCondition">Add Server</button>
-<!--
-1) If we bind a ts file property to an html attribute that has a value, for example the src attribute, the data binding can be done with:
-- string interpolation this way ..... src="{{ imagePath }}" ..... .
-- property binding this way ..... [src]="imagePath" ..... .
--->
-
-<span>
-  <img [src]="imagePath" class="img-responsive" style="max-height: 50px;">
-</span>
-<p>{{ buttonStatus }}</p>
-<!--
-Notes:
-- with the expression 'an html attribute that has a value' i mean an html attribute which usage is like the following.
-
-.....
-<button disabled></button>
-.....
-
-- with the expression 'an html attribute that hasn't a value' i mean an html attribute which usage is like the following.
-
-.....
-<img src="/path/to/file">
-.....
-
--->
+<div style="margin-left: 20px; margin-top: 20px">
+  <span>
+    <img src="{{imagePath}}" class="img-responsive" style="max-height: 50px;">
+  </span>
+  <p>{{ buttonStatus }}</p>
+</div>
