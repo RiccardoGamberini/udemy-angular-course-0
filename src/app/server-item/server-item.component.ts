@@ -6,14 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./server-item.component.css']
 })
 export class ServerItemComponent implements OnInit {
-  /* 
-  Notes:
-  - ServerItem is and alias for an instance of an object that has the
-  type server: {id: number, name: string}.
-  - @Input() permits to to instantiate an object of type serverItem.
-  Some objects of type serverItem are instantiated in app.component.html.
+  /* ServerItem is a type. I can instantiate an object of type serverItem. Server is an alias
+  for the type serverItem. I'm using this alias in app.component.html ([server]=serverObj).
   */
-  @Input() serverItem: {id: number, name: string};
+  @Input('server') serverItem: {id: number, name: string};
   constructor() { }
 
   ngOnInit(): void {

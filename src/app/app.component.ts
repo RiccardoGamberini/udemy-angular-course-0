@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'udemy-angular-course-0';
-  servers = [
+  serverObjs = [
     { id: 2234, name: 'server_0' },
     { id: 974, name: 'server_1' },
     { id: 43278, name: 'server_2' },

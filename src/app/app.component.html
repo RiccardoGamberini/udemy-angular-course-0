@@ -4,7 +4,7 @@
     The value of ths custom attribute must be an object that has these properties
     serverItem: {id: number, name: string}.
 -->
-<p *ngFor="let server of servers"
-    [serverItem]="server"
+<p *ngFor="let serverObj of serverObjs"
+    [server]="serverObj"
 >
 </p>
