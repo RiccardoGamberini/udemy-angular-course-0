@@ -1,2 +1,10 @@
 <app-header></app-header>
-<app-servers></app-servers>
+<!-- ServerItem is a custom html attribute. The properties of this custom attribute are
+    serverItem: {id: number, name: string} (are defined in server-item.components.ts).
+    The value of ths custom attribute must be an object that has these properties
+    serverItem: {id: number, name: string}.
+-->
+<p *ngFor="let server of servers"
+    [serverItem]="server"
+>
+</p>
