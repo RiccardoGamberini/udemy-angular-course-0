@@ -13,7 +13,6 @@ export class ServerItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    debugger;
   }
 
 }
