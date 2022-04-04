@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'udemy-angular-course-0';
+  aCondition: boolean;
+
+  constructor() {
+    this.aCondition = Math.random() > 0.5 ? true : false;
+  }
+
+  getColor() {
+    return this.aCondition ? 'green' : 'red';
+  }
 }
