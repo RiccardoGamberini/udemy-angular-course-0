@@ -1,2 +1,9 @@
-<app-header></app-header>
-<app-servers></app-servers>
+<!--[(ngModel)] syntax is used to do two way binding.
+The variable userName of ts file is called property.
+-->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="userName">
+<!--With the following line is implemented data binding from ts to html. This line is here only to demonstrate that two way binding is working.-->
+<p>{{ userName }}</p>
