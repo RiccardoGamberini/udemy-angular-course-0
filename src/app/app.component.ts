@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   message: string;
-  aFunction(zipCodeElement) {
+  aFunction(zipCodeElement: HTMLInputElement) {
     console.log(zipCodeElement)
     this.message = `The entire HTML input element has been printed in console. The value is: ${zipCodeElement.value}.`;
   }
