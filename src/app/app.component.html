@@ -1,10 +1,9 @@
-<!-- (name of an event) is the syntax to use to bind an event (in this case the event is keyboard char key press)-->
-<!-- (input)="onUpdateServerName($event)" is called event binding -->
+<p></p>
 <input
   type="text"
+  name="zip-code"
   class="form-control"
-  (input)="onUpdateServerName($event)">
-<!-- The following line implements data binding from ts to html, this line is here only to demonstrate that
- ..... (input)="onUpdateServerName($event)" ..... is updating the ts file.
--->
-<p>{{ serverName }}</p>
+  #templateVariableName
+>
+<button (click)="aFunction(templateVariableName)">Button</button>
+<p>{{message}}</p>

@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverName: string;
-
-  onUpdateServerName(event: Event) {
-    this.serverName = (<HTMLInputElement>event.target).value;
+  message: string;
+  aFunction(zipCodeElement) {
+    console.log(zipCodeElement)
+    this.message = `The entire HTML input element has been printed in console. The value is: ${zipCodeElement.value}.`;
   }
 }
