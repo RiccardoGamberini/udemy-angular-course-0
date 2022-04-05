@@ -6,4 +6,7 @@
   #templateVariableName
 >
 <button (click)="aFunction(templateVariableName)">Button</button>
-<p>{{message}}</p>
+<!--Every time the button is clicked the paragraph text is refreshed. Note that i haven't written code in app.component.ts because
+that refresh the paragraph text.
+-->
+<p>{{templateVariableName.value}}</p>
