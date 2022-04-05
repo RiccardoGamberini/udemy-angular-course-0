@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {repeat} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverName: string;
-
-  onUpdateServerName(event: Event) {
-    this.serverName = (<HTMLInputElement>event.target).value;
+  receptionConfirmationMessages: Array<string> = [];
+  aFunction(eventEmitted: {id: number, name: string}) {
+    this.receptionConfirmationMessages.push(`The app component received a customEvent with id ${eventEmitted.id}.`);
   }
 }
