@@ -5,16 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms'; /* This line is necessary in order to use two-way-binding.*/
 import { MatTableModule } from '@angular/material/table';
-import { HeaderComponent } from './header/header.component';
 import { ServerItemComponent } from './server-item/server-item.component';
 
 /*In order to user two-way-binding is also necessary to add FormsModule in imports section.*/
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    ServerItemComponent,
-    HeaderComponent
+    ServerItemComponent
   ],
   imports: [
     BrowserModule,

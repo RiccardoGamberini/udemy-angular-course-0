@@ -1,8 +1,10 @@
-<app-header></app-header>
-<!-- ServerItem is a custom html attribute. The properties of this custom attribute are
-    serverItem: {id: number, name: string} (are defined in server-item.components.ts).
-    The value of ths custom attribute must be an object that has these properties
-    serverItem: {id: number, name: string}.
+<!--
+Notes:
+- ServerItem is a custom html attribute. The properties of this custom attribute are
+serverItem: {id: number, name: string} (are defined in server-item.components.ts).
+The value of ths custom attribute must be an object that has the same properties of serverItem type.
+- App component is the parent component of sever-item component because contains the server-item component.
+- Server item component is the child component of app component because it's contained by the app component.
 -->
 <p>Id     |     Name</p>
 <app-server-item *ngFor="let serverObj of serverObjs"

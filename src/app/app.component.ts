@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'udemy-angular-course-0';
   serverObjs = [
     { id: 2234, name: 'server_0' },
     { id: 974, name: 'server_1' },
