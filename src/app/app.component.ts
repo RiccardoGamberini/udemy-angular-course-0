@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   message: string;
-  aFunction(zipCodeElement) {
-    console.log(zipCodeElement)
-    this.message = `The entire HTML input element has been printed in console. The value is: ${zipCodeElement.value}.`;
+  aFunction(zipCode: string) {
+    this.message = `The entire HTML input element has been printed in console. The value is: ${zipCode}.`;
+  }
+  returnTrue() {
+    return true;
   }
 }
