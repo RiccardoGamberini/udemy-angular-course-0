@@ -6,13 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  aCondition: boolean;
+  color = 'red';
+  seconds = 2;
 
-  constructor() {
-    this.aCondition = Math.random() > 0.5 ? true : false;
-  }
-
-  getColor() {
-    return this.aCondition ? 'green' : 'red';
+  ngOnInit() {
+    setInterval(() => {
+      this.color = Math.random() > 0.5 ? 'green' : 'red';
+    }, this.seconds * 1000);
   }
 }
