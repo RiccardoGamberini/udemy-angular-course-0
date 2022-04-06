@@ -28,7 +28,7 @@ export class AppComponent {
       * The property called 'aProperty' of custom-div-component' is changing every two seconds. The app-component prints the aProperty every two seconds and
       * it is a different value every time, this means that @ViewChild permits to customDivComponentValue ( ..... customDivComponentValue; ..... ) always updated.
       * */
-      this.message = `The CustomButtonComponent object is printed in console. The value of the property called 'aProperty' of this object is: ${this.customInputTextComponent.aProperty}`;
+      this.message = `The CustomButtonComponent object is printed in console. The value of the property called 'aProperty' of this object is: ${this.customDivComponentValue.aProperty}`;
     }, this.seconds * 1000)
   }
 }
