@@ -18,8 +18,13 @@ export class AppComponent {
 * - With the following line to the variable customInputTextComponent ( ..... customInputTextComponent; .....) i assign the
 * a value that is an object of type customInputTextComponent ( ..... CustomInputTextComponent is the name of the Typescript
 * class of custom-input-text component.
+* - ..... {static: true} ..... must be use because in this file we are accessing customDivComponentValue variable ( ..... console.log(this.customDivComponentValue)
+* ..... and ..... this.customDivComponentValue.aProperty .....) inside the ngOnInit function. If i want to access customDivComponentValue outside
+* ngOnInit function i can avoid to type the second argument passed to @ViewChild function ( ..... {static: true} ..... ), so the following line
+* would be instead ..... @ViewChild(CustomDivComponent) customDivComponentValue; ..... .
 * */
-  @ViewChild(CustomDivComponent) customDivComponentValue;
+
+  @ViewChild(CustomDivComponent, {static: true}) customDivComponentValue;
   ngOnInit() {
     setInterval(() => {
       console.log('Custom-div HTML element.')
