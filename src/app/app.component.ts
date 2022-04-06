@@ -1,4 +1,5 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import { Component, ElementRef, ViewChild} from '@angular/core';
+import {CustomDivComponent} from "./custom-input-text/custom-div.component";
 
 @Component({
   selector: 'app-root',
@@ -6,28 +7,28 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  firstMessage: string;
-  secondMessage: string;
+  message: string;
+  seconds = 2;
 /*
-* The string 'zipCodeInput' (the argument of @ViewChild) is the name of the template variable written in HTML file (#zipCodeInput).
-* After the call to @ViewChild there is a variable declaration (zipCodeInput: ElementRef). The name of this variable is 'zipCodeInput'.
-* When @ViewChild is used the name of the template variable (#zipCodeInput) and the name of the Typescpript class
-* variable (zipCodeInput: ElementRef) can be equal.
+* Notes:
+* - In the following line:
+*   - To the @ViewChild function i've passed as argument the name of the Typescript class of the custom-button component
+*   ( ..... @ViewChild(CustomInputTextComponent) ..... ).
+*   - I've declared the variable customInputTextComponent ( ..... customInputTextComponent: CustomInputTextComponent ..... ).
+* - With the following line to the variable customInputTextComponent ( ..... customInputTextComponent; .....) i assign the
+* a value that is an object of type customInputTextComponent ( ..... CustomInputTextComponent is the name of the Typescript
+* class of custom-input-text component.
 * */
-  @ViewChild('zipCodeInput') zipCodeInput: ElementRef;
-  /*
-* The string 'mobilePhoneInput' (the argument of @ViewChild) is the name of the template variable written in HTML file (#mobilePhoneInput).
-* After the call to @ViewChild there is a variable declaration (mobilePhone: ElementRef). The name of this variable is 'mobilePhone'.
-* When @ViewChild is used the name of the template variable (#mobilePhoneInput) and the name of the Typescpript class
-* variable (mobilePhone: ElementRef) can be different.
-* */
-  @ViewChild('mobilePhoneInput') mobilePhone: ElementRef;
-  aFunction() {
-    console.log('Zip code input HTML element.')
-    console.log(this.zipCodeInput)
-    console.log('Mobile phone input HTML element.')
-    console.log(this.mobilePhone)
-    this.firstMessage = `The templateVariableName object of type ElementRef is printed in console. The value is: ${this.zipCodeInput.nativeElement.value}`;
-    this.secondMessage = `The templateVariableName object of type ElementRef is printed in console. The value is: ${this.mobilePhone.nativeElement.value}`;
+  @ViewChild(CustomDivComponent) customDivComponentValue;
+  ngOnInit() {
+    setInterval(() => {
+      console.log('Custom-div HTML element.')
+      console.log(this.customDivComponentValue)
+      /*
+      * The property called 'aProperty' of custom-div-component' is changing every two seconds. The app-component prints the aProperty every two seconds and
+      * it is a different value every time, this means that @ViewChild permits to customDivComponentValue ( ..... customDivComponentValue; ..... ) always updated.
+      * */
+      this.message = `The CustomButtonComponent object is printed in console. The value of the property called 'aProperty' of this object is: ${this.customInputTextComponent.aProperty}`;
+    }, this.seconds * 1000)
   }
 }
