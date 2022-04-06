@@ -1,9 +1,18 @@
-<p></p>
+<p>Write something in both fields and then click the button.</p>
 <input
   type="text"
   name="zip-code"
   class="form-control"
-  #templateVariableName
+  #zipCodeInput
 >
-<button (click)="aFunction(templateVariableName)">Button</button>
-<p>{{message}}</p>
+<br>
+<input
+  type="text"
+  name="surname"
+  class="form-control"
+  #mobilePhoneInput
+>
+<br>
+<button (click)="aFunction()">Button</button>
+<p>{{firstMessage}}</p>
+<p>{{secondMessage}}</p>
