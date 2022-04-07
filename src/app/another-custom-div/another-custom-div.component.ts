@@ -1,15 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-another-custom-div',
   templateUrl: './another-custom-div.component.html',
   styleUrls: ['./another-custom-div.component.css']
 })
-export class AnotherCustomDivComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class AnotherCustomDivComponent {
 }
