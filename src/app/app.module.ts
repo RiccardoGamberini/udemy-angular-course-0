@@ -22,4 +22,6 @@ import { AnotherCustomDivComponent } from './another-custom-div/another-custom-d
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
