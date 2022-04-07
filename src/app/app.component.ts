@@ -6,28 +6,22 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  firstMessage: string;
-  secondMessage: string;
-/*
-* The string 'zipCodeInput' (the argument of @ViewChild) is the name of the template variable written in HTML file (#zipCodeInput).
-* After the call to @ViewChild there is a variable declaration (zipCodeInput: ElementRef). The name of this variable is 'zipCodeInput'.
-* When @ViewChild is used the name of the template variable (#zipCodeInput) and the name of the Typescpript class
-* variable (zipCodeInput: ElementRef) can be equal.
-* */
-  @ViewChild('zipCodeInput') zipCodeInput: ElementRef;
-  /*
-* The string 'mobilePhoneInput' (the argument of @ViewChild) is the name of the template variable written in HTML file (#mobilePhoneInput).
-* After the call to @ViewChild there is a variable declaration (mobilePhone: ElementRef). The name of this variable is 'mobilePhone'.
-* When @ViewChild is used the name of the template variable (#mobilePhoneInput) and the name of the Typescpript class
-* variable (mobilePhone: ElementRef) can be different.
-* */
-  @ViewChild('mobilePhoneInput') mobilePhone: ElementRef;
-  aFunction() {
-    console.log('Zip code input HTML element.')
-    console.log(this.zipCodeInput)
-    console.log('Mobile phone input HTML element.')
-    console.log(this.mobilePhone)
-    this.firstMessage = `The templateVariableName object of type ElementRef is printed in console. The value is: ${this.zipCodeInput.nativeElement.value}`;
-    this.secondMessage = `The templateVariableName object of type ElementRef is printed in console. The value is: ${this.mobilePhone.nativeElement.value}`;
+  @ViewChild('aParagraph') aParagraph: ElementRef;
+
+  ngOnInit() {
+    console.log(`Paragraph text isn't visible because component view hasn't been initialized yet.\n
+    Paragraph text: ${this.aParagraph.nativeElement.textContent}`);
   }
+
+  ngAfterViewInit() {
+    /*
+    * When ngAfterViewInit is executed the component lifecycle phase in which Angular has initialized the app component view is completed. Thanks to the fact that
+    * this phase is completed i can access HTML elements of app.component.html
+    * (.....this.aParagraph.nativeElement.textContent). If you want to access an HTML element as soon as possible during the component lifecycle
+    * you have to do it in ngAfterViewInit body.
+    * */
+    console.log(`Paragraph text is visible because ngAfterViewInit is executed after component view has been initialized.\n
+    Paragraph text: ${this.aParagraph.nativeElement.textContent}`);
+  }
+
 }
