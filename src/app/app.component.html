@@ -1,7 +1,3 @@
 <app-custom-div>
-  <p *ngFor="let item of anArray">Id = {{item.id}} | data = {{item.data}}</p>
+  <p #someParagraph *ngFor="let item of anArray">Id = {{item.id}} | data = {{item.data}}</p>
 </app-custom-div>
-<br>
-<app-another-custom-div>
-  <p *ngFor="let item of anArray">Id = {{item.id}} | data = {{item.data}}</p>
-</app-another-custom-div>

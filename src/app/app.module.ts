@@ -5,13 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatTableModule } from '@angular/material/table';
 import { CustomDivComponent } from './custom-div/custom-div.component';
-import { AnotherCustomDivComponent } from './another-custom-div/another-custom-div.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomDivComponent,
-    AnotherCustomDivComponent
+    CustomDivComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +20,4 @@ import { AnotherCustomDivComponent } from './another-custom-div/another-custom-d
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
-}
+export class AppModule { }
