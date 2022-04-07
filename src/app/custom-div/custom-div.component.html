@@ -8,7 +8,9 @@ Example of the default behaviour of angular:
   - insert content between an opening and a closing tag of a component, example:
     .....
     <app-custom-side-bar>
-      {{stringToBeDisplayed}}
+      <div>
+        {{stringToBeDisplayed}}
+      </div>
     </app-custom-side-bar>
     .....
   - don't insert the directive ng-content ( ..... <ng-content></ng-content> .... ) in the html file of the custom-side-bar component.

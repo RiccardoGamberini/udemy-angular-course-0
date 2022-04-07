@@ -14,5 +14,4 @@ export class AppComponent {
     {id: 4, data: 'string_4'},
     {id: 5, data: 'string_5'}
   ];
-  message = 'A string.';
 }
