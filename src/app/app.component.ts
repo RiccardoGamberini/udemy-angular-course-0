@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild} from '@angular/core';
+import { Component, ViewChild} from '@angular/core';
 import {CustomDivComponent} from "./custom-input-text/custom-div.component";
 
 @Component({
@@ -23,7 +23,6 @@ export class AppComponent {
 * ngOnInit function i can avoid to type the second argument passed to @ViewChild function ( ..... {static: true} ..... ), so the following line
 * would be instead ..... @ViewChild(CustomDivComponent) customDivComponentValue; ..... .
 * */
-
   @ViewChild(CustomDivComponent, {static: true}) customDivComponentValue;
   ngOnInit() {
     setInterval(() => {
