@@ -1,0 +1,23 @@
+<!--
+The difference between the HTML file of custom-div component and the HTML file of another-custom-div component is that custom-div hasn't the built-in
+angular directive <ng-content></ng-content>.
+The default behaviour of angular is the following.
+Example of the default behaviour of angular:
+- Assume that i you have created a component called 'custom-side-bar'.
+- If i:
+  - insert content between an opening and a closing tag of a component, example:
+    .....
+    <app-custom-side-bar>
+      {{stringToBeDisplayed}}
+    </app-custom-side-bar>
+    .....
+  - don't insert the directive ng-content ( ..... <ng-content></ng-content> .... ) in the html file of the custom-side-bar component.
+    .....
+    <div style="width: 500px; height: 500px; background-color: red">
+    </div>
+    .....
+- The result will be that {{stringToBeDisplayed}} will not be displayed to the user.
+ To change angular default behaviour read the comments present in another-custom-div.component.html.
+ -->
+<div style="width: 500px; height: 500px; background-color: red">
+</div>
