@@ -14,8 +14,12 @@ export class CustomDivComponent {
   * of custom-div component. The content of custom-div component is a different thing than the view of custom-div component. Note that in the Angular documentation
   * there is the distinction of content and view (example: ViewChild and ContentChild).
   * - The value of someParagraph variable (.....someParagraph: ElementRef.....) is the first HTML element that match the selector passed to @ContentChild.
+  * - With ContentChild custom-div component can access to it's own content. It's own content is:
+  *   .....<p #someParagraph *ngFor="let item of anArray">Id = {{item.id}} | data = {{item.data}}</p>.....
+  *   It's own content is created by app component using values present in app.component.ts. So using ng-content and ContentChild i can transfer data
+  *   a parent component (the app component) to a child component (the custom-div component).
   * */
-  @ContentChild('someParagraph') someParagraph: ElementRef; /*With ContentChild custom-div component can access to it's own content.*/
+  @ContentChild('someParagraph') someParagraph: ElementRef;
 
   aFunction() {
     console.log(this.someParagraph);
