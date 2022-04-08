@@ -16,7 +16,7 @@ export class CustomDivComponent {
   * - The value of someParagraph variable (.....someParagraph: ElementRef.....) is the first HTML element that match the selector passed to @ContentChild.
   * - With ContentChild custom-div component can access to it's own content. It's own content is:
   *   .....<p #someParagraph *ngFor="let item of anArray">Id = {{item.id}} | data = {{item.data}}</p>.....
-  *   It's own content is created by app component using values present in app.component.ts. So using ng-content and ContentChild i can transfer data
+  * - It's own content is created by app component using values present in app.component.ts. So using ng-content and ContentChild i can transfer data
   *   a parent component (the app component) to a child component (the custom-div component).
   * */
   @ContentChild('someParagraph') someParagraph: ElementRef;
