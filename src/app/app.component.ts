@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {repeat} from "rxjs";
 
 @Component({
   selector: 'app-root',
