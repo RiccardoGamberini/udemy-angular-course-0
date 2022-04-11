@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-custom-input-text',
+  selector: 'app-custom-div',
   templateUrl: './custom-div.component.html',
   styleUrls: ['./custom-div.component.css']
 })

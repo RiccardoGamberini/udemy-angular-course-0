@@ -1,5 +1,5 @@
 import { Component, ViewChild} from '@angular/core';
-import {CustomDivComponent} from "./custom-input-text/custom-div.component";
+import {CustomDivComponent} from "./custom-div/custom-div.component";
 
 @Component({
   selector: 'app-root',
@@ -17,7 +17,7 @@ export class AppComponent {
 *   - I've declared the variable customInputTextComponent ( ..... customInputTextComponent: CustomInputTextComponent ..... ).
 * - With the following line to the variable customInputTextComponent ( ..... customInputTextComponent; .....) i assign the
 * a value that is an object of type customInputTextComponent ( ..... CustomInputTextComponent is the name of the Typescript
-* class of custom-input-text component.
+* class of custom-div component.
 * - ..... {static: true} ..... must be use because in this file we are accessing customDivComponentValue variable ( ..... console.log(this.customDivComponentValue)
 * ..... and ..... this.customDivComponentValue.aProperty .....) inside the ngOnInit function. If i want to access customDivComponentValue outside
 * ngOnInit function i can avoid to type the second argument passed to @ViewChild function ( ..... {static: true} ..... ), so the following line
