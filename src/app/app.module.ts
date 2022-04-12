@@ -3,20 +3,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServersComponent } from './servers/servers.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MaterialModule } from 'material.module';
 import { MatNativeDateModule } from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
+import { SidenavItemComponent } from './sidenav/sidenav-item/sidenav-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServersComponent,
-    HeaderComponent,
-    SidenavComponent
+    SidenavComponent,
+    SidenavItemComponent
   ],
   imports: [
     AppRoutingModule,
