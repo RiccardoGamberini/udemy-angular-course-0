@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   featureName = 'Home';
+  allFeaturesNames = ['Home', 'Settings'];
   aFunction(eventEmitted: string) {
     this.featureName = eventEmitted;
   }
