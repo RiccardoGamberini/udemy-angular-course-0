@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  receptionConfirmationMessages: Array<string> = [];
-  aFunction(eventEmitted: {id: number, name: string}) {
-    this.receptionConfirmationMessages.push(`The app component received a customEvent with id ${eventEmitted.id}.`);
+  featureName = 'Home';
+  aFunction(eventEmitted: string) {
+    this.featureName = eventEmitted;
   }
 }

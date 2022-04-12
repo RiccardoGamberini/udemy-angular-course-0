@@ -1,5 +1,7 @@
-<!-- In the following line i'm making data binding of the custom HTML event attribute called 'customEvent' with the member of AppComponent class called aFunction.-->
-<app-custom-button (customEvent)="aFunction($event)"></app-custom-button>
-<!---->
-<p *ngFor="let receptionConfirmationMessage of receptionConfirmationMessages"
->{{receptionConfirmationMessage}}</p>
+<app-custom-button (customEvent)="aFunction($event)">Home</app-custom-button>
+<app-custom-button (customEvent)="aFunction($event)">Settings</app-custom-button>
+<div *ngFor="let feature of ['Home', 'Settings']">
+  <p *ngIf="featureName === feature">{{featureName}} page.</p>
+</div>
+
+
