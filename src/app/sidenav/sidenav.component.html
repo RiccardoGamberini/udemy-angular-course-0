@@ -2,11 +2,11 @@
 	<mat-sidenav #sidenav  mode="side" class="example-sidenav" [ngStyle]="{ 'width.em': sidenavWidth }" opened="true">
 	  <div class="logomain">Logo</div>
 	  <mat-nav-list>
-    <app-sidenav-item
-      *ngFor="let item of sidenavItems">
+<!--    <app-sidenav-item
+      *ngFor="let item of sidenavItems"
       [sidenavItem]="item"
-    </app-sidenav-item>
-<!--		<mat-list-item routerLink="1" routerLinkActive="active" >
+    </app-sidenav-item>-->
+		<mat-list-item routerLink="1" routerLinkActive="active" >
 		  <mat-icon mat-list-icon>person</mat-icon>
 		  <div fxFlex="10"></div>
 		  <div *ngIf="sidenavWidth > 6" class="sidenav-item">
@@ -26,7 +26,7 @@
 		  <div *ngIf="sidenavWidth > 6" class="sidenav-item">
 			<h5 class="lead">Contact</h5>
 		  </div>
-		</mat-list-item>-->
+		</mat-list-item>
 		</mat-nav-list>
 		<button (click)="changeSidenavMode()" mat-raised-button>
 			<mat-icon class="sidenav-menu">{{resizeButtonIconName}}</mat-icon>
