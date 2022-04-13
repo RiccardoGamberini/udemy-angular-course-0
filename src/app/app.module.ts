@@ -4,18 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SidenavComponent } from './sidenav/sidenav.component';
 import { MaterialModule } from 'material.module';
 import { MatNativeDateModule } from '@angular/material/core';
-import {HttpClientModule} from '@angular/common/http';
-import { SidenavItemComponent } from './sidenav/sidenav-item/sidenav-item.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CustomButtonComponent } from './custom-button/custom-button.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent,
-    SidenavItemComponent
+    CustomButtonComponent
   ],
   imports: [
     AppRoutingModule,
