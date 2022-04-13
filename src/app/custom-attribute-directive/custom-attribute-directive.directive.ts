@@ -10,8 +10,9 @@ export class CustomAttributeDirectiveDirective implements OnInit {
   * - Assigns to this property a value that is an object of type ElementRef that is the HTML element on which the attribute directive is placed.
   * */
   constructor(private elementRef: ElementRef) { }
-
   ngOnInit() {
-    console.log(this.elementRef.nativeElement.value);
+    this.elementRef.nativeElement.style.backgroundColor = 'red';
+    this.elementRef.nativeElement.style.width = '500px';
+    this.elementRef.nativeElement.style.height = '500px';
   }
 }
