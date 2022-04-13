@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { CustomButtonComponent } from './custom-button/custom-button.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomButtonComponent
+    CustomButtonComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,

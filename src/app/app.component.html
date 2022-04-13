@@ -1,6 +1,8 @@
-<app-custom-button (customEvent)="aFunction($event)">Home</app-custom-button>
-<app-custom-button (customEvent)="aFunction($event)">Settings</app-custom-button>
-<div *ngFor="let feature of allFeaturesNames">
-  <p *ngIf="featureName === feature"> {{featureName}} page.</p>
-</div>
+<mat-sidenav-container>
+  <app-custom-button (customEvent)="aFunction($event)">Home</app-custom-button>
+  <app-custom-button (customEvent)="aFunction($event)">Settings</app-custom-button>
+  <div *ngFor="let feature of allFeaturesNames">
+    <p *ngIf="featureName === feature"> {{featureName}} page.</p>
+  </div>
+</mat-sidenav-container>
 
