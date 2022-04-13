@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  getColor() {
-    return Math.random() > 0.5 ? 'red' : 'green';
+  aCondition = true;
+  ngOnInit() {
+    this.aCondition = Math.random() > 0.5 ? true : false;
   }
 }
