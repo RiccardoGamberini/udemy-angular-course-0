@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'udemy-angular-course-0';
+  getColor() {
+    return Math.random() > 0.5 ? 'red' : 'green';
+  }
 }
