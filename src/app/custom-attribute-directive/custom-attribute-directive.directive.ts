@@ -1,9 +1,9 @@
-import {AfterViewInit, Directive, ElementRef} from '@angular/core';
+import {Directive, ElementRef, OnInit} from '@angular/core';
 
 @Directive({
   selector: '[appCustomAttributeDirective]'
 })
-export class CustomAttributeDirectiveDirective implements AfterViewInit {
+export class CustomAttributeDirectiveDirective implements OnInit {
   /*
   * The private keyword:
   * - Adds a property to CustomAttributeDirectiveDirective class called elementRef.
@@ -11,7 +11,7 @@ export class CustomAttributeDirectiveDirective implements AfterViewInit {
   * */
   constructor(private elementRef: ElementRef) { }
 
-  ngAfterViewInit() {
+  ngOnInit() {
     console.log(this.elementRef.nativeElement.value);
   }
 }
