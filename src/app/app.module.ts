@@ -4,24 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { MatTableModule } from '@angular/material/table';
-import { HeaderComponent } from './header/header.component';
 import { CustomAttributeDirectiveDirective } from './custom-attribute-directive/custom-attribute-directive.directive';
+import { CustomInputComponent } from './custom-input/custom-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    CustomAttributeDirectiveDirective
+    CustomAttributeDirectiveDirective,
+    CustomInputComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,
-    MatTableModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
