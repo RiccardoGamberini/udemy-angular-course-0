@@ -1,7 +1,7 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav mode="side" opened>
     <div *ngFor="let feature of allFeaturesNames">
-      <app-custom-button (customEvent)="featureName = $event">{{feature}}</app-custom-button>
+      <app-custom-button (customEvent)="featureName = $event.featureSelectedName">{{feature}}</app-custom-button>
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
