@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { HeaderComponent } from './header/header.component';
+import { CustomAttributeDirectiveDirective } from './custom-attribute-directive/custom-attribute-directive.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    CustomAttributeDirectiveDirective
   ],
   imports: [
     BrowserModule,
