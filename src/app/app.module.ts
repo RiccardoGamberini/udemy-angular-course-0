@@ -7,12 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { MatTableModule } from '@angular/material/table';
 import { CustomButtonComponent } from './custom-button/custom-button.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent,
     CustomButtonComponent
   ],
   imports: [
