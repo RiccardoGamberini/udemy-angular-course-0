@@ -1,7 +1,11 @@
 <mat-sidenav-container>
   <mat-sidenav mode="side" opened>
-    <app-custom-button (customEvent)="aFunction($event)">Home</app-custom-button>
-    <app-custom-button (customEvent)="aFunction($event)">Settings</app-custom-button>
+    <div>
+      <app-custom-button (customEvent)="aFunction($event)">Home</app-custom-button>
+    </div>
+    <div>
+      <app-custom-button (customEvent)="aFunction($event)">Settings</app-custom-button>
+    </div>
   </mat-sidenav>
   <mat-sidenav-content>
     <div *ngFor="let feature of allFeaturesNames">

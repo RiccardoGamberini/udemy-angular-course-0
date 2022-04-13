@@ -12,16 +12,16 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CustomButtonComponent,
     SidenavComponent,
-    MaterialModule
+    CustomButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
