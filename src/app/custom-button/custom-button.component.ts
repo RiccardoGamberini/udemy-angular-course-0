@@ -16,9 +16,9 @@ export class CustomButtonComponent {
   - The expression '@Output()' permits to components different from server-item component to receive events emitted by customEventEmitter.
   - It's possible to instantiate an EventEmitter object not receivable by other components, in order to do so do not add @Output() decorator.
    */
-  @Output() customEvent = new EventEmitter<{eventName: string, featureSelectedName: string }>();
+  @Output() customEvent = new EventEmitter<{name: string, featureSelectedName: string }>();
 
   onClick(event) {
-    this.customEvent.emit({eventName: 'sidenavButtonClicked', featureSelectedName: event.target.textContent});
+    this.customEvent.emit({name: 'nameOfTheEvent', featureSelectedName: event.target.textContent});
   }
 }
