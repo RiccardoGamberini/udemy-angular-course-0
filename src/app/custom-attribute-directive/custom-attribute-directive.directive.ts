@@ -5,7 +5,8 @@ by people to this type. */
 /*
 /* 
 The following selector name (......appCustomAttributeDirective.....) is a selector of type class name. This type is called class name because
-in a HTML file is used the same way as all HTML built-in attributes that doesn't require a value. Example the disabled attribute.
+in order to use it the string appCustomAttributeDirective must be added to the value of the class attribute of the HTML element that have
+to be modified by the attribute directive. Example: .....class="appCustomAttributeDirective"..... .
 */
 @Directive({
   selector: '.appCustomAttributeDirective'
