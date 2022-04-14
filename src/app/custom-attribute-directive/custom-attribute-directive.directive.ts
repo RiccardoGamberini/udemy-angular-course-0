@@ -1,4 +1,4 @@
-import {Directive, ElementRef, OnInit} from '@angular/core';
+import {Directive, ElementRef, OnInit, Renderer2} from '@angular/core';
 
 /*
 Only in the branches of this repository i will call attribute name the type of this selector. I think it's more clear than all the other names given
@@ -12,10 +12,11 @@ in a HTML file is used the same way as all HTML built-in attributes that doesn't
 })
 /**/
 export class CustomAttributeDirectiveDirective implements OnInit {
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
+  
   ngOnInit() {
-    this.elementRef.nativeElement.style.backgroundColor = 'red';
-    this.elementRef.nativeElement.style.width = '500px';
-    this.elementRef.nativeElement.style.height = '500px';
+    this.renderer.setStyle(this.elementRef.nativeElement, 'backgroundColor', 'red');
+    this.renderer.setStyle(this.elementRef.nativeElement, 'width', '500px');
+    this.renderer.setStyle(this.elementRef.nativeElement, 'height', '500px');
   }
 }
