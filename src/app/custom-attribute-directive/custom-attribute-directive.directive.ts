@@ -23,13 +23,12 @@ export class CustomAttributeDirectiveDirective implements OnInit {
     this.renderer.setStyle(this.elementRef.nativeElement, 'height', '500px');
   }
 
-  /* 
-  Mouseenter and mouseleave (.....@HostListener('mouseenter')..... and .....@HostListener('mouseleave').....) are predefined names for events.
-  */
+  /* Mouseenter and mouseleave (.....@HostListener('mouseenter')..... and .....@HostListener('mouseleave').....) are predefined names for events. */
   @HostListener('mouseenter') aFunctionName() {
+    /*  */
     this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'blue');
   }
-  /*  */
+  
   @HostListener('mouseleave') anotherFunctionName() {
     this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'red');
   }
