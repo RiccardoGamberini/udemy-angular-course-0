@@ -9,7 +9,7 @@ export class CustomAttributeDirectiveDirective implements OnInit {
 
   ngOnInit() { }
 
-  @HostListener('click', ['$event']) aFunctionName(anEvent) {
-    console.log(anEvent.target.textContent);
+  @HostListener('click', ['$event.target']) aFunctionName(anEventTarget) {
+    console.log(anEventTarget.textContent);
   }
 }
