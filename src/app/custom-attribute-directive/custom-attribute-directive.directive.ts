@@ -1,14 +1,13 @@
 import {Directive, ElementRef, OnInit} from '@angular/core';
 
+/* 
+The following selector name (.....[appCustomAttributeDirective].....) is a selector of type attribute. This type is called attribute because
+in a HTML file is used the same way as all HTML built-in attributes that doesn't require a value. Example the disabled attribute.
+*/
 @Directive({
   selector: '[appCustomAttributeDirective]'
 })
 export class CustomAttributeDirectiveDirective implements OnInit {
-  /*
-  * The private keyword:
-  * - Adds a property to CustomAttributeDirectiveDirective class called elementRef.
-  * - Assigns to this property a value that is an object of type ElementRef that is the HTML element on which the attribute directive is placed.
-  * */
   constructor(private elementRef: ElementRef) { }
   ngOnInit() {
     this.elementRef.nativeElement.style.backgroundColor = 'red';
