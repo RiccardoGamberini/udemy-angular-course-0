@@ -1,14 +1,15 @@
 import {Directive, ElementRef, OnInit} from '@angular/core';
 /*
-Only in the branches of this repository i will call class name the type of this selector. I think it's more clear than all the other names given
+Only in the branches of this repository i will call tag name the type of this selector. I think it's more clear than all the other names given
 by people to this type. */
 /*
 /* 
-The following selector name (......appCustomAttributeDirective.....) is a selector of type class name. This type is called class name because
-in a HTML file is used the same way as all HTML built-in attributes that doesn't require a value. Example the disabled attribute.
+The following selector name (......div.....) is a selector of type tag name. This type is called tag name because the directive will be
+applied to all the HTML element with a tag name that matches the name of the selector. In the example of this branch the directive will be applied to
+all div elements in the web application.
 */
 @Directive({
-  selector: '.appCustomAttributeDirective'
+  selector: 'div'
 })
 /*  */
 export class CustomAttributeDirectiveDirective implements OnInit {
