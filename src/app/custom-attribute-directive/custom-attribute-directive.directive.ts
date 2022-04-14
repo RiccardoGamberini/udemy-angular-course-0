@@ -1,4 +1,4 @@
-import {Directive, ElementRef, OnInit, Renderer2} from '@angular/core';
+import {Directive, ElementRef, HostListener, OnInit, Renderer2} from '@angular/core';
 
 @Directive({
   selector: '[appCustomAttributeDirective]'
@@ -16,10 +16,21 @@ export class CustomAttributeDirectiveDirective implements OnInit {
     - Renderer property a value that is an object of type Renderer2.
   */
   constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
-  
+
   ngOnInit() {
     this.renderer.setStyle(this.elementRef.nativeElement, 'backgroundColor', 'red');
     this.renderer.setStyle(this.elementRef.nativeElement, 'width', '500px');
     this.renderer.setStyle(this.elementRef.nativeElement, 'height', '500px');
+  }
+
+  /* 
+  Notes:
+  - Mouseenter and mouseleave (.....@HostListener('mouseenter')..... and .....@HostListener('mouseleave').....) are predefined names for events.
+  */
+  @HostListener('mouseenter') AFunctionName() {
+    this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'blue');
+  }
+  @HostListener('mouseleave') ANotherFunctionName() {
+    this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'red');
   }
 }
