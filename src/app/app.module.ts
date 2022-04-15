@@ -4,13 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatTableModule } from '@angular/material/table';
-import { ServerItemComponent } from './server-item/server-item.component';
+import { CustomButtonComponent } from './custom-button/custom-button.component';
 
-/*In order to user two-way-binding is also necessary to add FormsModule in imports section.*/
 @NgModule({
   declarations: [
     AppComponent,
-    ServerItemComponent
+    CustomButtonComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,4 @@
-<!-- ServerItem is a custom html attribute. The properties of this custom attribute are
-    serverItem: {id: number, name: string} (are defined in server-item.components.ts).
-    The value of ths custom attribute must be an object that has these properties
-    serverItem: {id: number, name: string}.
+<!--If the type of the value of a custom HTML attribute is a string another way to implement a data tranfer from parent HTML to child Ts other than
+.....[aPropertyName]="'aValue'"..... is the following:
 -->
-<p>Id     |     Name</p>
-<app-server-item *ngFor="let server of servers"
-[serverItem]="server"></app-server-item>
+<app-custom-button aPropertyName="aValue"></app-custom-button>
