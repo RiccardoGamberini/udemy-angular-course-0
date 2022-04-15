@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-servers',
-  templateUrl: './servers.component.html',
+  selector: 'app-custom-div',
+  templateUrl: './custom-div.component.html',
 })
-export class ServersComponent {
+export class CustomDivComponent {
   serverCreated = false;
   seconds = 2;
   user = { id: 1, role: 'admin' };

@@ -1,0 +1,31 @@
+<!--I call the following code alpha.-->
+<div>
+  <p>{{ user.role }}</p>
+  <p *ngIf="['admin', 'manager'].includes(user.role)">User has permission.</p>
+</div>
+<!---->
+<!--I call the following code beta.-->
+<ng-template>
+  <div>
+    <p>{{ user.role }}</p>
+    <p [ngIf]="['admin', 'manager'].includes(user.role)">User has permission.</p>
+  </div>
+</ng-template>
+<!---->
+<!--Alpha and beta are equivalent. Because the purpose of the star before the expression ngIf is to convert this
+.....
+<div>
+  <p>{{ user.role }}</p>
+  <p *ngIf="['admin', 'manager'].includes(user.role)">User has permission.</p>
+</div>
+.....
+into this
+.....
+<ng-template>
+  <div>
+    <p>{{ user.role }}</p>
+    <p [ngIf]="['admin', 'manager'].includes(user.role)">User has permission.</p>
+  </div>
+</ng-template>
+.....
+-->
