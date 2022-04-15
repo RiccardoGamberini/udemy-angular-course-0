@@ -1,15 +1,16 @@
-import {Directive, ElementRef, HostListener, OnInit, Renderer2} from '@angular/core';
+import {Directive, HostListener, OnInit} from '@angular/core';
+import { CustomModel } from '../customModel.model';
 
 @Directive({
   selector: '[appCustomAttributeDirective]'
 })
 export class CustomAttributeDirectiveDirective implements OnInit {
   
-  constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
+  constructor() { };
 
-  ngOnInit() { }
+  ngOnInit() { };
 
-  @HostListener('click', ['$event.target']) aFunctionName(anEventTarget) {
-    console.log(anEventTarget.textContent);
+  @HostListener('customEvent', ['$event']) aFunctionName(customModel: CustomModel) {
+    console.log(customModel.id);
   }
 }
