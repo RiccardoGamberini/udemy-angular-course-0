@@ -1,15 +1,17 @@
-import {Directive, ElementRef, HostListener, OnInit, Renderer2} from '@angular/core';
+import {Directive, HostBinding, HostListener, OnInit} from '@angular/core';
 
 @Directive({
   selector: '[appCustomAttributeDirective]'
 })
 export class CustomAttributeDirectiveDirective implements OnInit {
-  
-  constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
+  seconds = 2;
+  @HostBinding('style.backgroundColor') backgroundColor: string = 'transparent';
 
-  ngOnInit() { }
+  constructor() { }
 
-  @HostListener('click', ['$event']) aFunctionName(anEvent) {
-    console.log(anEvent.target.textContent);
+  ngOnInit() { 
+    setInterval(() => {
+      this.backgroundColor = Math.random() > 0.5 ? 'green' : 'red';
+    }, this.seconds * 1000)
   }
 }
