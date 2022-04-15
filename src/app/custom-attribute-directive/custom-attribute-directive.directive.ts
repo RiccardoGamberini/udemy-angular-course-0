@@ -1,17 +1,20 @@
-import {Directive, HostBinding, HostListener, OnInit} from '@angular/core';
+import {Directive, Input, OnInit} from '@angular/core';
 
 @Directive({
   selector: '[appCustomAttributeDirective]'
 })
 export class CustomAttributeDirectiveDirective implements OnInit {
   seconds = 2;
-  @HostBinding('style.backgroundColor') backgroundColor: string = 'transparent';
+  maximumRandomInteger = 2000;
+  @Input() aPropertyName: string;
 
   constructor() { }
 
   ngOnInit() { 
     setInterval(() => {
-      this.backgroundColor = Math.random() > 0.5 ? 'green' : 'red';
+      let randomInteger = Math.floor(Math.random() * (this.maximumRandomInteger + 1));
+      this.aPropertyName = randomInteger.toString();
+      console.log(this.aPropertyName);
     }, this.seconds * 1000)
   }
 }
