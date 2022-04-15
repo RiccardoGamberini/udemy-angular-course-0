@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'udemy-angular-course-0';
+  seconds = 2;
+  aConditionName = false;
+  ngOnInit() {
+    setInterval(() => {
+      this.aConditionName = Math.random() > 0.5 ? true : false;
+    }, this.seconds * 1000);
+  }
 }
