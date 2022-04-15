@@ -5,4 +5,12 @@ import { Component, HostListener, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent { }
+export class AppComponent implements OnInit {
+  constructor() { };
+
+  ngOnInit() { };
+
+  @HostListener('window:keydown.enter', ['$event']) aFunctionName(keyboardEvent: KeyboardEvent) {
+    console.log(keyboardEvent);
+  }
+ }

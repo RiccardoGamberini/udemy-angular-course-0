@@ -10,7 +10,7 @@ export class CustomAttributeDirectiveDirective implements OnInit {
 
   ngOnInit() { };
 
-  @HostListener('customEvent', ['$event']) aFunctionName(customModel: CustomModel) {
+  @HostListener('window.keydown.enter', ['$event']) aFunctionName(customModel: CustomModel) {
     console.log(customModel.id);
   }
 }

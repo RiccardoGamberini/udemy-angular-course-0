@@ -5,13 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { CustomAttributeDirectiveDirective } from './custom-attribute-directive/custom-attribute-directive.directive';
-import { CustomButtonComponent } from './custom-button/custom-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomAttributeDirectiveDirective,
-    CustomButtonComponent
+    CustomAttributeDirectiveDirective
   ],
   imports: [
     BrowserModule,
