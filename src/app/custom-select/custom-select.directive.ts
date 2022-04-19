@@ -1,9 +1,9 @@
 import {Directive, HostListener, OnInit} from '@angular/core';
 
 @Directive({
-  selector: '[appCustomAttributeDirective]'
+  selector: '[appCustomSelect]'
 })
-export class CustomAttributeDirectiveDirective implements OnInit {
+export class CustomSelectDirective implements OnInit {
 
   constructor() { }
 

@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { CustomAttributeDirectiveDirective } from './custom-attribute-directive/custom-attribute-directive.directive';
+import { CustomSelectDirective } from './custom-select/custom-select.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomAttributeDirectiveDirective
+    CustomSelectDirective
   ],
   imports: [
     BrowserModule,
