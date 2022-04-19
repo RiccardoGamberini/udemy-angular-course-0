@@ -11,9 +11,8 @@ interface Food {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'},
-  ];
+  message: string;
+  aFunction(customEvent: {message: string}) {
+    this.message = customEvent.message;
+  }
 }
