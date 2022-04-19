@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   seconds = 2;
-  aConditionName = false;
+  maximumRandomInteger = 10;
+  aNumber = 2;
   ngOnInit() {
     setInterval(() => {
-      this.aConditionName = Math.random() > 0.5 ? true : false;
+      console.log(this.aNumber);
+      this.aNumber = Math.floor(Math.random() * (this.maximumRandomInteger + 1));
     }, this.seconds * 1000);
   }
 }

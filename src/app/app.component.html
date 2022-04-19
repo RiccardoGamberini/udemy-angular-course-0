@@ -1,1 +1,9 @@
-<div *appUnless="aConditionName">A div</div>
+<div [ngSwitch]="aNumber">
+  <p *ngSwitchCase="0">The number is 0.</p>
+  <p *ngSwitchCase="1">The number is 1.</p>
+  <p *ngSwitchCase="2">The number is 2.</p>
+  <p *ngSwitchCase="3">The number is 3.</p>
+  <p *ngSwitchCase="4">The number is 4.</p>
+  <p *ngSwitchCase="5">The number is 5.</p>
+  <p *ngSwitchDefault>The number isn't in the following interval: 0 <= x <= 5.</p>
+</div>

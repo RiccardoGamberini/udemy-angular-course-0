@@ -4,12 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { CustomStructuralDirectiveDirective } from './custom-structural-directive/custom-structural-directive.directive';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CustomStructuralDirectiveDirective
+    AppComponent
   ],
   imports: [
     BrowserModule,
