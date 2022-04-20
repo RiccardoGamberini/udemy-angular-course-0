@@ -1,5 +1,6 @@
 export class AService {
-  aFunction(message: string) {
-    console.log(message);
+  message: string;
+  aFunction() {
+    console.log(this.message);
   }
 }

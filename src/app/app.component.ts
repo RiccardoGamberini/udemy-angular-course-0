@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { AService } from "./aService.service";
 
 @Component({
@@ -7,11 +7,13 @@ import { AService } from "./aService.service";
   styleUrls: ['./app.component.css'],
   providers: [AService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  message = 'This is the value of the message property of the AppComponent class.'
 
   constructor(private aService: AService) { }
 
-  anotherFunction() {
-    this.aService.aFunction();
+  ngOnInit() {
+    this.aService.message = this.message;
+    console.log(this.aService.message);
   }
 }
