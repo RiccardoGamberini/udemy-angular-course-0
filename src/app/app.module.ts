@@ -4,13 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { CustomSelectDirective } from './custom-select/custom-select.directive';
 import { MaterialModule } from 'material.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CustomSelectDirective
+    AppComponent
   ],
   imports: [
     BrowserModule,

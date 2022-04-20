@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
-
-interface Food {
-  value: string;
-  viewValue: string;
-}
+import { AService } from "./aService.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [AService]
 })
 export class AppComponent {
-  message: string;
-  aFunction(customEvent: {message: string}) {
-    this.message = customEvent.message;
+
+  constructor(private aService: AService) { }
+
+  anotherFunction() {
+    this.aService.aFunction();
   }
 }
