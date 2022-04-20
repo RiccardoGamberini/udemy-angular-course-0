@@ -7,10 +7,9 @@ import { AService } from "../aService.service";
   styleUrls: ['./custom-div.component.css']
 })
 export class CustomDivComponent implements OnInit {
-
   constructor(private aService: AService) { }
 
   ngOnInit(): void {
-    console.log(this.aService.message);
+    this.aService.aFunction();
   }
 }
