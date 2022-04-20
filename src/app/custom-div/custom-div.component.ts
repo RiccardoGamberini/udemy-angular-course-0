@@ -18,16 +18,12 @@ import { AService } from "../aService.service";
   selector: 'app-custom-div',
   templateUrl: './custom-div.component.html',
   styleUrls: ['./custom-div.component.css'],
-  providers: [AService]
 })
 export class CustomDivComponent implements OnInit {
-  message = 'This is the value of the message property of the CustomDivComponent class.'
-
   constructor(private aService: AService) {}
 
   ngOnInit(): void {
-    /*This.aService is an instance of AService that is different from the instance used by app component and antoher-custom-div component.*/
-    this.aService.message = this.message;
+    /*This.aService is the same instance of service of another-custom-div component.*/
     console.log(this.aService.message);
   }
 }
