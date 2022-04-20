@@ -5,7 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from 'material.module';
+import { AService } from "./aService.service";
+import { AnotherService } from "./anotherService.service";
 
+/*In order to inject AService into AnotherService for both services:
+- The name of the class must be inserted in providers array.
+- A line in which the typescript file is imported must be added.*/
 @NgModule({
   declarations: [
     AppComponent
@@ -17,7 +22,7 @@ import { MaterialModule } from 'material.module';
     FormsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [AService, AnotherService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

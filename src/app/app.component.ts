@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
-import { AService } from "./aService.service";
+import { Component, OnInit } from '@angular/core';
+import {AnotherService} from "./anotherService.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [AService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  message = 'This is the value of the message property of AppComponent.';
 
-  constructor(private aService: AService) { }
+  constructor(private anotherService: AnotherService) { }
 
-  anotherFunction() {
-    this.aService.aFunction();
+  ngOnInit() {
+    this.anotherService.aFunction(this.message);
   }
 }
