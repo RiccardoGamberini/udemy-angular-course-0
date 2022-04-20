@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from 'material.module';
 import { CustomDivComponent } from './custom-div/custom-div.component';
+import { AnotherCustomDivComponent } from './another-custom-div/another-custom-div.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomDivComponent
+    CustomDivComponent,
+    AnotherCustomDivComponent
   ],
   imports: [
     BrowserModule,

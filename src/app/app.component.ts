@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   constructor(private aService: AService) { }
 
   ngOnInit() {
+    /*This.aService is the same instance of service of another-custom-div component.*/
     this.aService.message = this.message;
     console.log(this.aService.message);
   }
