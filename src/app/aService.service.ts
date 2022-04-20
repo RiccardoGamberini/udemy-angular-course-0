@@ -1,5 +1,5 @@
 export class AService {
-  aFunction() {
-    console.log("The service works.");
+  aFunction(message: string) {
+    console.log(message);
   }
 }
