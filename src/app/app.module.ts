@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { CustomDivComponent } from './custom-div/custom-div.component';
 import { AService } from "./aService.service";
 
-/*In order to have inject the aService at app.module.ts level i have to:
+/*In order to have inject the aService at application level without lazy loading i have to:
 * - Insert the name of the service class in providers array (.....providers: [AService].....).
 * - Add a line in which i import aService.service.ts (.....import {AService} from "./aService.service";
 .....)*/
@@ -25,7 +25,7 @@ import { AService } from "./aService.service";
     FormsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [AService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
