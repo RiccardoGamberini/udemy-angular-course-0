@@ -25,7 +25,7 @@ import { AService } from "./aService.service";
     FormsModule,
     MaterialModule
   ],
-  providers: [AService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
