@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {SidenavItem} from "./sidenavItem.model";
+import { Component, Input} from '@angular/core';
+import { SidenavItem } from "./sidenavItem.model";
 
 @Component({
   selector: 'app-sidenav-item',
@@ -8,9 +8,5 @@ import {SidenavItem} from "./sidenavItem.model";
 })
 export class SidenavItemComponent {
   @Input() sidenavItem: SidenavItem;
-
-  onClick(sidenavItemTitle: string) {
-    console.log(sidenavItemTitle);
-  }
 }
 

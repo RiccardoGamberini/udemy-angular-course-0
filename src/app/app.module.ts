@@ -9,13 +9,17 @@ import { MaterialModule } from 'material.module';
 import { MatNativeDateModule } from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
 import { SidenavItemComponent } from './sidenav/sidenav-item/sidenav-item.component';
+import { HomeComponent } from './home/home.component';
+import { SettingsComponent } from './settings/settings.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    SidenavItemComponent
+    SidenavItemComponent,
+    HomeComponent,
+    SettingsComponent
   ],
   imports: [
     AppRoutingModule,

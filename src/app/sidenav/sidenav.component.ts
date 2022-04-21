@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {SidenavItem} from "./sidenav-item/sidenavItem.model";
 
 @Component({
   selector: 'app-sidenav',
@@ -7,8 +8,7 @@ import { Component } from '@angular/core';
 })
 export class SidenavComponent {
   sidenavItems = [
-    { title: 'Home', iconName: 'home' },
-    { title: 'Users', iconName: 'person' },
-    { title: 'Settings', iconName: 'settings'}
+    new SidenavItem('Home', '/'),
+    new SidenavItem('Settings', '/settings')
   ];
 }

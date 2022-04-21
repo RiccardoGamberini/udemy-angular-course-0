@@ -1,9 +1,9 @@
 export class SidenavItem {
   public title: string;
-  public iconName: string;
+  public route: string;
 
-  constructor(title: string, iconName: string) {
+  constructor(title: string, route: string) {
     this.title = title;
-    this.iconName = iconName;
+    this.route = route;
   }
 }
