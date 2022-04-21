@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SidenavComponent {
   sidenavItems = [
+    { title: 'Home', iconName: 'home' },
     { title: 'Users', iconName: 'person' },
     { title: 'Settings', iconName: 'settings'}
   ];
