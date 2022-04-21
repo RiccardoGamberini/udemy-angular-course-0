@@ -1,1 +1,24 @@
-<p>Settings list page.</p>
+<h1>Settings list page.</h1>
+<div>
+  <div>
+    <p>'settings' is the value of this button routerLink attribute. Angular tries to load http//localhost:4201/settings/list/settings. This will cause
+    an error.</p>
+    <button mat-raised-button routerLink="settings">Go to 'settings'</button>
+  </div>
+  <div>
+    <p>'./settings' is the value of this button routerLink attribute. Angular tries to load http//localhost:4201/settings/list/settings. This will cause
+      an error.</p>
+    <button mat-raised-button routerLink="./settings">Go to './settings'</button>
+  </div>
+  <div>
+    <p>'../settings' is the value of this button routerLink attribute. Angular tries to load http//localhost:4201/settings/settings. This will cause
+      an error.</p>
+    <button mat-raised-button routerLink="../settings">Go to '../settings'</button>
+  </div>
+  <div>
+    <p>'settings' is the value of this button routerLink attribute. Angular tries to load http//localhost:4201/settings and this page will successfully
+      loaded. Adding double dots and slash works the same as navigating in nested directories using windows PowerShell.</p>
+
+    <button mat-raised-button routerLink="../../settings">Go to '../../settings'</button>
+  </div>
+</div>
