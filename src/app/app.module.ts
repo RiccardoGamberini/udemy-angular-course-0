@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { SidenavItemComponent } from './sidenav/sidenav-item/sidenav-item.component';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
+import { SettingsListComponent } from './settings/settings-list/settings-list.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SettingsComponent } from './settings/settings.component';
     SidenavComponent,
     SidenavItemComponent,
     HomeComponent,
-    SettingsComponent
+    SettingsComponent,
+    SettingsListComponent
   ],
   imports: [
     AppRoutingModule,
