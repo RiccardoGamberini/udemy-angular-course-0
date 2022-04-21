@@ -6,8 +6,11 @@ import { SettingsListComponent } from "./settings/settings-list/settings-list.co
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'settings', component: SettingsComponent },
-  { path: 'settings/list', component: SettingsListComponent }
+  { path: 'settings', component: SettingsComponent,
+    children: [
+      { path: 'list', component: SettingsListComponent }
+    ]
+  },
 ];
 
 @NgModule({
