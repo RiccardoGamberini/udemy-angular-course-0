@@ -12,7 +12,6 @@ import { SidenavItemComponent } from './sidenav/sidenav-item/sidenav-item.compon
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SettingsListComponent } from './settings/settings-list/settings-list.component';
-import { SettingItemComponent } from './settings/settings-list/setting-item/setting-item.component';
 
 
 @NgModule({
@@ -22,8 +21,7 @@ import { SettingItemComponent } from './settings/settings-list/setting-item/sett
     SidenavItemComponent,
     HomeComponent,
     SettingsComponent,
-    SettingsListComponent,
-    SettingItemComponent
+    SettingsListComponent
   ],
   imports: [
     AppRoutingModule,
