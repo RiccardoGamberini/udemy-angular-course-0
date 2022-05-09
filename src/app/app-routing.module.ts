@@ -15,6 +15,11 @@ const routes: Routes = [
   },
 ];
 
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'users', component: UsersComponent },
+];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -1,6 +1,27 @@
 <h1>Settings page.</h1>
 <!--If activeRouterLink directive is used when button is clicked the class which name is contained in routerLinkActive value is applied to the HTML element
 which routerLinkActive directive is placed on. The class is applied until another HTML element with a routerLinkActive directive is used.-->
+<!--How routerLinkActive works. If this directive is used Angular analyzes which is the current URL in browser addressess bar and depending on that applies or not
+the classes which names are contained in routerLinkActive attribute value.
+I'll explain how routerLinkActive works with the following example.
+Consider:
+- this URL: http://localhost:4200/users.
+- this routes:
+.....
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'users', component: UsersComponent },
+];
+- these HTML elements:
+.....
+<button routerLink="" routerLinkActive="aClassName">Home</button>
+.....
+<button routerLink="users" routerLinkActive="anotherClassName">Users</button>
+.....
+.....
+When http://localhost:4200/users is loaded in browser Angular deduce that paths '' and 'users' are currently loaded in browser. Due to this
+deduction chosen class or classes will be applied to both buttons at the same time.
+-->
 <button mat-raised-button routerLink="list" routerLinkActive="firstClassName">Go to settings list page</button>
 <button mat-raised-button routerLink="setting" routerLinkActive="secondClassName thirdClassName">Go to setting page.</button>
 <router-outlet></router-outlet>
