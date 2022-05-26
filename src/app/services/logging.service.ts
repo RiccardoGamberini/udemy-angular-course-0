@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LoggingService {
-  logPageName(pageName: string) {
-    console.log(pageName);
+  logMessage(message: string) {
+    console.log(`Timestamp: ${new Date()}. Message: ${message}`);
   }
 }
