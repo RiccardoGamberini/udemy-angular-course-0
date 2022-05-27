@@ -11,7 +11,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { SidenavItemComponent } from './sidenav/sidenav-item/sidenav-item.component';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
-import {LoggingService} from "./services/logging.service";
+import {AServiceService} from "./services/a-service.service";
+import { AComponentComponent } from './a-component/a-component.component';
 
 /*In this branch i'm:
   - Injecting another-service service in home component telling Angular that another-service service is injectable only in home component and childs (i'm telling
@@ -31,6 +32,7 @@ import {LoggingService} from "./services/logging.service";
     SidenavItemComponent,
     HomeComponent,
     SettingsComponent,
+    AComponentComponent
   ],
   imports: [
     AppRoutingModule,
@@ -42,7 +44,7 @@ import {LoggingService} from "./services/logging.service";
     MaterialModule,
     ReactiveFormsModule,
   ],
-  providers: [LoggingService],
+  providers: [AServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

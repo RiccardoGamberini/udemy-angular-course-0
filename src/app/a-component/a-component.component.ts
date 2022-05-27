@@ -1,18 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import {AServiceService} from "../services/a-service.service";
 import {User} from "../models/user.model";
+import {AServiceService} from "../services/a-service.service";
 
 @Component({
-  selector: 'app-settings',
-  templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.css'],
-  providers: [AServiceService]
+  selector: 'app-a-component',
+  templateUrl: './a-component.component.html',
+  styleUrls: ['./a-component.component.css']
 })
-export class SettingsComponent implements OnInit {
+export class AComponentComponent implements OnInit {
   user: User = new User("", "");
 
   constructor(private aServiceService: AServiceService) {
-    console.log("Settings page constructor.")
     this.aServiceService.anEventEmitter.subscribe((user: User) => this.user = user);
   }
 

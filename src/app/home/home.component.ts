@@ -1,27 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { AnotherServiceService } from '../another-service.service';
-import {LoggingService} from "../services/logging.service";
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AServiceService } from "../services/a-service.service";
+import { User } from "../models/user.model";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [AnotherServiceService]
 })
 export class HomeComponent implements OnInit {
-  constructor(private loggingService: LoggingService, private anotherService: AnotherServiceService) {}
+  @ViewChild("nameInput") nameInput: ElementRef;
+  @ViewChild("surnameInput") surnameInput: ElementRef;
+
+  constructor(private aServiceService: AServiceService) {}
 
   ngOnInit(): void {
   }
 
   onButtonClick(): void {
-    let maximumNumber = 10;
-    let firstAddend = this.generateRandomNumber(maximumNumber);
-    let secondAddend = this.generateRandomNumber(maximumNumber);
-    this.anotherService.aFunction(firstAddend, secondAddend);
-  }
-
-  generateRandomNumber(maximumNumber: number): number {
-    return Math.floor(Math.random() * (maximumNumber + 1));
+    let user = new User(this.nameInput.nativeElement.value, this.surnameInput.nativeElement.value);
+    this.aServiceService.anEventEmitter.emit(user);
   }
 }
