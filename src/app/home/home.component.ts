@@ -1,20 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {LoggingService} from "../services/logging.service";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [LoggingService]
 })
 export class HomeComponent implements OnInit {
-  constructor(private loggingService: LoggingService) {}
+  constructor() { }
 
   ngOnInit(): void {
   }
-
-  onButtonClick(message: string) {
-    this.loggingService.logMessage(message)
-  }
-
 }

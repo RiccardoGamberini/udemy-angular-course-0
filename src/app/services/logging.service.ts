@@ -1,7 +1,37 @@
-/*The @Injectable decorator must be added only in the receiver service if we want to inject a service into a service. However due to the fact that maybe
-* in future Angular will require the @Injectable decorator in both services, the receiver and the one injected, in order to inject a service into a service, it's
-* suggested to insert the @Injectable decorator in both service now, although it's not mandatory. It's suggested to do so because in future Angular will work differently
-* the code won't break.*/
+/* The following two things are similar:
+0) Writing the following code in the typescript file of a-module module.
+.....
+import {LoggingService} from "../services/logging.service";
+
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule
+  ],
+  providers: [LoggingService]
+})
+.....
+1) Writing the following code in the typescript file of a service.
+.....
+import { Injectable } from "@angular/core";
+import { AModuleModule } from "../a-module/a-module.module";
+
+@Injectable({
+  providedIn: AModuleModule
+})
+.....
+
+I sad that are similar because:
+- 0)
+  - Set a module as a hierarchy level:
+    - Into which you can inject the logging service.
+    - Below which all hierarchy levels can receive an instance of the logging service.
+  - Tells Angular to load lazily logging service in a-module module.
+  Lazy loading of service
+- 1) Set a module as a hierarchy level:
+  - Into which you can inject the logging service.
+  - Below which all hierarchy levels can receive an instance of the logging service.
+* */
 export class LoggingService {
   logMessage(message: string) {
     console.log(`Timestamp: ${new Date()}. Message: ${message}`);
