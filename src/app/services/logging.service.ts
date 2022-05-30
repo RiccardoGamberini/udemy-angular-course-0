@@ -1,3 +1,6 @@
+import { AModuleModule } from "../a-module/a-module.module";
+import { Injectable } from "@angular/core";
+
 /* The following two things are similar:
 0) Writing the following code in the typescript file of a-module module.
 .....
@@ -32,6 +35,10 @@ I sad that are similar because:
   - Into which you can inject the logging service.
   - Below which all hierarchy levels can receive an instance of the logging service.
 * */
+
+@Injectable({
+  providedIn: AModuleModule
+})
 export class LoggingService {
   logMessage(message: string) {
     console.log(`Timestamp: ${new Date()}. Message: ${message}`);
