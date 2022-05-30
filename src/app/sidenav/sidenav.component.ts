@@ -9,6 +9,5 @@ import {SidenavItem} from "./sidenav-item/sidenavItem.model";
 export class SidenavComponent {
   sidenavItems = [
     new SidenavItem('Home', ''),
-    new SidenavItem('Settings', 'settings')
   ];
 }
