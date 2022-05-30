@@ -24,16 +24,16 @@ import { AModuleModule } from "../a-module/a-module.module";
 })
 .....
 
-I sad that are similar because:
+I said that are similar because:
 - 0)
   - Set a module as a hierarchy level:
     - Into which you can inject the logging service.
     - Below which all hierarchy levels can receive an instance of the logging service.
+- 1)
+  - Set a module as a hierarchy level:
+    - Into which you can inject the logging service.
+    - Below which all hierarchy levels can receive an instance of the logging service.
   - Tells Angular to load lazily logging service in a-module module.
-  Lazy loading of service
-- 1) Set a module as a hierarchy level:
-  - Into which you can inject the logging service.
-  - Below which all hierarchy levels can receive an instance of the logging service.
 * */
 
 @Injectable({
