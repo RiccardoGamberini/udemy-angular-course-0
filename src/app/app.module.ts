@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { SidenavItemComponent } from './sidenav/sidenav-item/sidenav-item.component';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
+import {LoggingService} from "./services/logging.service";
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { SettingsComponent } from './settings/settings.component';
     MaterialModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
