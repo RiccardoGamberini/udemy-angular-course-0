@@ -10,7 +10,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
 import { SidenavItemComponent } from './sidenav/sidenav-item/sidenav-item.component';
 import { HomeComponent } from './home/home.component';
-import { SettingsComponent } from './settings/settings.component';
 import {LoggingService} from "./logging.service";
 
 
@@ -20,7 +19,6 @@ import {LoggingService} from "./logging.service";
     SidenavComponent,
     SidenavItemComponent,
     HomeComponent,
-    SettingsComponent,
   ],
   imports: [
     AppRoutingModule,
