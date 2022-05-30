@@ -39,8 +39,4 @@ I sad that are similar because:
 @Injectable({
   providedIn: AModuleModule
 })
-export class LoggingService {
-  logMessage(message: string) {
-    console.log(`Timestamp: ${new Date()}. Message: ${message}`);
-  }
-}
+export class LoggingService { }
