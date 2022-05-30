@@ -10,7 +10,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
 import { SidenavItemComponent } from './sidenav/sidenav-item/sidenav-item.component';
 import { HomeComponent } from './home/home.component';
-import {LoggingService} from "./logging.service";
 
 
 @NgModule({
@@ -30,7 +29,7 @@ import {LoggingService} from "./logging.service";
     MaterialModule,
     ReactiveFormsModule,
   ],
-  providers: [LoggingService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
