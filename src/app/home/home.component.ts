@@ -5,7 +5,6 @@ import {LoggingService} from "../services/logging.service";
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [LoggingService]
 })
 export class HomeComponent implements OnInit {
   constructor(private loggingService: LoggingService) {}
@@ -16,5 +15,4 @@ export class HomeComponent implements OnInit {
   onButtonClick(message: string) {
     this.loggingService.logMessage(message)
   }
-
 }
